@@ -12,13 +12,12 @@ You are summarizing today's most relevant computational chemistry papers for a
 researcher with this profile:
 
 They work on computational and theoretical chemistry. Their current interests
-involve: (1) many-body potentials, many-body expansion, and permutationally
-invariant polynomials, (2) machine learning force fields including MACE,
-universal interatomic potentials, and CCSD(T)-level ML potentials, (3)
-GPU-accelerated simulation and Density Functional Theory, (4) data-driven
-molecular simulation, biomolecular force fields, molecular fragmentation,
-and biomolecular simulation structural validation. They closely follow the
-work of Ilyes Batatia, Bingqing Cheng, Mark E. Tuckerman, and Michele Ceriotti.\
+involve: (1) molecular qubits, diradicals, spin Hamiltonians, spin decoherence,
+and ODMR, (2) spin–orbit coupling, intersystem crossing, and spin dynamics,
+(3) radical pair mechanisms, magnetic field effects, and chiral symmetry,
+(4) spin-dependent electronic structure, excited-state processes, and
+mechanistic molecular photophysics. They closely follow the work of
+Michael Wasielewski and Francesco Di Maiolo.\
 """
 
 
