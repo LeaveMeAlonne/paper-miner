@@ -4,30 +4,25 @@ ARXIV_CATEGORIES = ["physics.chem-ph", "cond-mat.soft", "q-bio.BM", "cs.LG", "ph
 
 # Topic keywords used to build search queries
 TOPIC_KEYWORDS = [
-    # Cluster A - Many-body and data-driven potentials
-    "many-body potential",
-    "permutationally invariant polynomial",
-    "biomolecular force field",
-    "many-body expansion",
-    "data-driven molecular simulation",
+    # Cluster A - Molecular qubit and ODMR
+    "molecular qubit",
+    "diradical",
+    "spin decoherence",
+    "spin Hamiltonian",
+    "ODMR",
     # Cluster B - Machine learning force fields
-    "CCSD(T) machine learning",
-    "molecular fragmentation",
-    "MACE polarizable",
-    "universal interatomic potential",
-    "FAIR atomistic simulation",
-    "GPU-accelerated simulation",
-    "Density Functional Theory",
-    # Cluster c - bio related
-    "biomolecular simulation structural validation"
+    "spin orbit coupling",
+    "intersystem crossing",
+    "radical pair mechanism",
+    "magnetic field effect",
+    "chiral symmetry",
+    "spin dynamics"
 ]
 
 # Author names — searched in the author field (not abstract)
 AUTHOR_NAMES = [
-    "Ilyes Batatia",
-    "Bingqing Cheng",
-    "Mark E. Tuckerman",
-    "Michele Ceriotti"
+    "Michael Wasilewski",
+    "Francesco DiMaiolo"
 ]
 
 # Scoring
