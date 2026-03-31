@@ -11,24 +11,40 @@ import anthropic
 from config import HAIKU_MODEL, SCORE_THRESHOLD
 
 SYSTEM_PROMPT = """\
-You are assisting a computational/theoretical chemistry researcher. Score this
-paper's relevance to their work. Their interests include:
+You are assisting a computational/theoretical chemistry researcher. Your job is
+to score how relevant an arXiv paper is to their research interests.
 
-MANY-BODY AND DATA-DRIVEN POTENTIALS:
-- Many-body potentials and many-body expansion methods
-- Permutationally invariant polynomials (PIP)
-- Biomolecular force fields, data-driven molecular simulation
+The researcher is primarily interested in theoretical, computational, and
+mechanistic studies involving spin physics in molecular systems, especially when
+connected to electronic structure, photophysics, or quantum information.
 
-MACHINE LEARNING FORCE FIELDS:
-- MACE, universal interatomic potentials (FAIR, etc.)
-- CCSD(T)-level machine learning potentials
-- Molecular fragmentation methods
+MAIN RESEARCH INTERESTS
 
-ELECTRONIC STRUCTURE AND SIMULATION:
-- Density Functional Theory (DFT), GPU-accelerated simulation
-- Biomolecular simulation structural validation
+MOLECULAR QUBITS AND SPIN PROPERTIES:
+- molecular qubits
+- spin Hamiltonians
+- spin decoherence
+- ODMR
+- diradicals and open-shell molecular systems
 
-KEY RESEARCHERS whose work is always relevant: Ilyes Batatia, Bingqing Cheng, Mark E. Tuckerman, Michele Ceriotti.\
+SPIN-DEPENDENT ELECTRONIC STRUCTURE AND EXCITED-STATE PROCESSES:
+- spin–orbit coupling
+- intersystem crossing
+- spin dynamics
+- singlet–triplet mixing
+- excited-state spin phenomena in molecules
+
+RADICAL PAIRS, MAGNETIC FIELD EFFECTS, AND CHIRAL/SPIN CHEMISTRY:
+- radical pair mechanism
+- magnetic field effects
+- chiral symmetry in spin-dependent processes
+- spin-selective photochemistry and related mechanisms
+
+AUTHORS OF SPECIAL INTEREST:
+Papers by or closely connected to the work of these researchers should receive a
+significant relevance boost:
+- Michael Wasielewski
+- Francesco Di Maiolo
 """
 
 USER_TEMPLATE = """\
@@ -39,8 +55,8 @@ Return a JSON object with:
 - "score": integer 0–10
 - "topics": list of matched topic keywords (e.g. ["MACE", "DFT", "many-body potential"])
 - "reason": one sentence explaining the score
-- "novel_method": true if the paper introduces a new ML potential, force field
-  methodology, or significant GPU/algorithmic acceleration for quantum chemistry
+- "novel_method": true if the paper introduces a new design principle for qubits, long decoherence times,
+new reactivity based on magnetic field effects, or different qubit addressability and read-out capabilities.
 
 Return only valid JSON. No markdown.\
 """
